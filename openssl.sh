@@ -21,7 +21,7 @@ function replace_text() {
 }
 
 sed -i 's|#include "third_party/boringssl/src/include/openssl/chacha.h"||g' ${SOURCE_DIR}/http2/test_tools/http2_random.cc
-sed -i 's|#include "#include "third_party/boringssl/src/include/openssl/rand.h"|#include "openssl/rand.h"|g' ${SOURCE_DIR}/http2/test_tools/http2_random.cc
+sed -i 's|#include "third_party/boringssl/src/include/openssl/rand.h"|#include "openssl/rand.h"|g' ${SOURCE_DIR}/http2/test_tools/http2_random.cc
 
 FILE="http2/test_tools/http2_random.cc"
 DELETE_START_PATTERN="CRYPTO_chacha_20"
